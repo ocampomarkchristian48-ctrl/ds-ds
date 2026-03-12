@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mind Logic</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="symbols"></div>
+
+<h1 class="title" id="titleText">Mind Logic</h1>
+
+<div class="container" id="menu">
+
+<input type="text" id="playerName" class="name-box" placeholder="Enter your name">
+
+<button class="enter-btn" id="enterBtn" onclick="enterGame()">Enter</button>
+
+<div class="language">
+<button onclick="setLang('en')">English</button>
+<button onclick="setLang('tl')">Tagalog</button>
+</div>
+
+</div>
+
+
+<!-- INSTRUCTIONS -->
+<div class="instructions hidden" id="instructions">
+
+<h2 id="instructionTitle">Instructions</h2>
+
+<p id="instructionText">
+Welcome to Mind Logic! This web game has 3 modes: Easy Mode, Normal Mode, and Hard Mode.
+In this game, you will answer questions related to Discrete Structures lessons such as
+Sets, Relations, Functions, Logic, and Probability. Each mode contains shuffled questions.
+You must reach at least 16 points to win the game. If your score is below 16 points,
+the game will restart from the beginning and all questions will be shuffled again.
+Good Luck!
+</p>
+
+<button class="start-btn" id="startBtn" onclick="showModes()">Start Game</button>
+
+</div>
+
+
+<!-- MODE SELECTION -->
+<div class="instructions hidden" id="modes">
+
+<h2 id="modeTitle">Select Mode</h2>
+
+<button class="start-btn" id="easyBtn">Easy Mode</button>
+<button class="start-btn" id="normalBtn">Normal Mode</button>
+<button class="start-btn" id="hardBtn">Hard Mode</button>
+
+</div>
+
+
+<!-- EASY MODE -->
+<div class="instructions hidden" id="easyMode">
+
+<h2>Easy Mode</h2>
+
+<p id="scenarioText"></p>
+
+<h3 id="questionText"></h3>
+
+<div>
+
+<button class="choice" onclick="chooseAnswer(0)" id="choice0"></button>
+<button class="choice" onclick="chooseAnswer(1)" id="choice1"></button>
+<button class="choice" onclick="chooseAnswer(2)" id="choice2"></button>
+<button class="choice" onclick="chooseAnswer(3)" id="choice3"></button>
+
+</div>
+
+<button class="start-btn" onclick="nextQuestion()">Next</button>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
