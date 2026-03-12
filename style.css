@@ -1,0 +1,197 @@
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+
+/* animated background */
+background: linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1c92d2);
+background-size:400% 400%;
+animation:bgMove 10s ease infinite;
+}
+
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* title */
+
+.title{
+font-size:90px;
+color:white;
+letter-spacing:5px;
+margin-bottom:40px;
+text-shadow:0 0 20px cyan,0 0 40px cyan;
+}
+
+/* menu box */
+
+.container{
+background:white;
+padding:50px;
+width:400px;
+border-radius:15px;
+box-shadow:0 10px 40px rgba(0,0,0,0.4);
+text-align:center;
+z-index:2;
+}
+
+/* input */
+
+.name-box{
+width:100%;
+padding:15px;
+font-size:18px;
+border-radius:8px;
+border:2px solid #ccc;
+margin-bottom:20px;
+}
+
+/* enter button */
+
+.enter-btn{
+width:100%;
+padding:15px;
+font-size:18px;
+background:#2c5364;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+margin-bottom:25px;
+transition:0.3s;
+}
+
+.enter-btn:hover{
+background:#1c3b4a;
+transform:scale(1.05);
+}
+
+/* language buttons */
+
+.language button{
+padding:10px 20px;
+margin:5px;
+font-size:16px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+background:#ddd;
+}
+
+.language button:hover{
+background:#bbb;
+}
+
+/* floating symbols */
+
+.symbols{
+position:absolute;
+width:100%;
+height:100%;
+top:0;
+left:0;
+overflow:hidden;
+}
+
+.symbol{
+position:absolute;
+color:rgba(255,255,255,0.2);
+font-size:40px;
+animation:float 10s linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+}
+100%{
+transform:translateY(-10vh);
+}
+}
+
+/* instructions */
+
+.hidden{
+display:none;
+}
+
+.instructions{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+background:white;
+width:650px;
+padding:40px;
+border-radius:15px;
+box-shadow:0 10px 40px rgba(0,0,0,0.5);
+text-align:left;
+z-index:5;
+}
+
+.instructions h2{
+text-align:center;
+font-size:40px;
+margin-bottom:20px;
+}
+
+.instructions p{
+margin:15px 0;
+font-size:18px;
+}
+
+/* start button */
+
+.start-btn{
+display:block;
+margin:30px auto 0;
+padding:15px 40px;
+font-size:18px;
+background:#2c5364;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.start-btn:hover{
+background:#1c3b4a;
+transform:scale(1.05);
+}
+
+/* ============================= */
+/* EASY MODE QUESTION BUTTONS */
+/* ============================= */
+
+.choice{
+display:block;
+width:100%;
+padding:14px;
+margin:10px 0;
+font-size:17px;
+border:none;
+border-radius:8px;
+background:#2c5364;
+color:white;
+cursor:pointer;
+transition:0.3s;
+}
+
+.choice:hover{
+background:#1c3b4a;
+transform:scale(1.03);
+}
+
+/* kapag pinili ang sagot */
+
+.choice:active{
+background:#0f2027;
+}
